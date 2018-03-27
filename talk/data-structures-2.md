@@ -84,7 +84,8 @@ class LinkedList:
 # Trees
 Binary tree:              
 
-![Binary tree](tree.png) ![Non binary tree](tree2.png)
+![Binary tree](tree.png)
+![Non binary tree](tree2.png)
 
 ---
 # Trees
@@ -104,8 +105,7 @@ class TreeNode:
 ```
 ---
 # Try yourself!
-`input:` the root of a binary tree
-
+`input:` the root of a binary tree  
 `output:` a list containing all nodes by level, starting from the root.
 
 ![Binary tree](bt.png)
@@ -119,6 +119,23 @@ Start with the closest nodes first
 - **Depth fitst search**
 Start with one node and go as deep as possible into its children
 ![dfs](bfs-dfs.png)
+
+---
+# Time complexity
+- **BFS**
+- **All elements at the 3rd level of the tree?**
+- **Depth of the tree**
+
+![bt](bint.png)
+
+---
+# Time complexity
+- **BFS** -> O(n)
+- **All elements at the 3rd level of the tree?** -> O(n)
+- **Depth of the tree** - > log n
+
+![bt](bint.png)
+
 ---
 # BFS & DFS
 ## Implementations
@@ -226,6 +243,7 @@ def bfs_path(root):
 1.  Nodes as objects and edges as pointers (reaching a node is O(n), good for sparse, directed graphs)
 - A list of edges between numbered nodes (reaching an edge is O(n), good for sparse, undirected graphs)
 - A matrix containing all edge weights between numbered node x and node y (reaching an edge is O(1), good for big, directed and undirected graphs)
+
 ![mat](matrix.jpg)
 
 ---
@@ -256,13 +274,29 @@ def bfs_path(root):
 
  ---
  # Dijkstra
-Itterate until you store the node you want to find the shortest path to, every iteration:
-- Look at all the edges you can reach
-- Store the smallest distance
-- Update all edges that are adjecent to the smallest distance
+Store a *priority queue* with all reachable nodes.
+Store a list with nodes you are certain about.  
+In every iteration:  
+- Dequeue the node with the smallest distance to the start node
+- Store the this nodes in the list with certain nodes
+- If this node is the node we want to reach, *break*
+- Update the queue, by adding all nodes adjecent to this node:
+	- If a node is already stored in the queue, update its weight if it is now lower.
+	- If a node is already certain. Do not queue it.
+
 
 ![Dijkstra.png](Dijkstras.png)
 
 ---
-# Heaps?
-[Only the best datastructure ever! ](https://www.cs.cmu.edu/~adamchik/15-121/lectures/Binary%20Heaps/heaps.html)
+# Heaps/Priority Queue?
+
+Runtime:
+- Adding **O(log n)**
+- Removing **O(log n)**
+- Sorting **O(n log n)**   
+
+Storage:
+- Storage **O(n)**
+
+
+[Only the best datastructure ever! ](https://www.cs.cmu.edu/~adamchik/15-121/lectures/Binary%20Heaps/heaps.html)  
