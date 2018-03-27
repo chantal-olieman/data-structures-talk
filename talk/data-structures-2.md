@@ -100,7 +100,7 @@ class BinaryTreeNode:
 class TreeNode:
     def __init__(self, data):
         self.data = data # contains the data
-        self.cilderen = [] # contains a list with childeren
+        self.children = [] # contains a list with children
 ```
 ---
 # Try yourself!
@@ -122,6 +122,44 @@ Start with one node and go as deep as possible into its children
 ---
 # BFS & DFS
 ## Implementations
+```
+class TreeNode:
+    def __init__(self, data):
+        self.data = data # contains the data
+        self.children = [] # contains a list with children
+```
+---
+# Implementation
+## BFS
+```
+import queue
+def bfs_path(root):
+    path = list()
+    node_queue = queue.Queue()
+    node_queue.put(root)
+    while not node_queue.empty():
+        node = node_queue.get()
+        path.append(node.data)
+        for child in node.children:
+						node_queue.put(child)
+    return path
+```
+---
+# Implementation
+## DFS
+```
+import queue
+def dfs_path(root):
+    path = list()
+    node_queue = list()
+    node_queue.append(root)
+    while not node_queue.empty():
+        node = node_queue.pop()
+        path.append(node.data)
+        for child in node.children:
+						node_queue.append(child)
+    return path
+```
 
 ---
 # Graphs
