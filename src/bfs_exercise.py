@@ -1,4 +1,4 @@
-from binary_tree import BinaryTreeNode
+from src.binary_tree import BinaryTreeNode
 
 
 def get_values_by_level(root: BinaryTreeNode):
