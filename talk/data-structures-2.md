@@ -215,7 +215,7 @@ def bfs_path(root):
     visited = set()
     while not node_queue.empty():
         node = node_queue.get()
-        visited.add(node)
+        visited.add(node)	
         path.append(node.data)
         for child in node.children:
             if child in visited:
@@ -241,8 +241,8 @@ def bfs_path(root):
 ### Storing a graph
 
 1.  Nodes as objects and edges as pointers (reaching a node is O(n), good for sparse, directed graphs)
-- A list of edges between numbered nodes (reaching an edge is O(n), good for sparse, undirected graphs)
-- A matrix containing all edge weights between numbered node x and node y (reaching an edge is O(1), good for big, directed and undirected graphs)
+2. A list of edges between numbered nodes (reaching an edge is O(n), good for sparse, undirected graphs)
+3. A matrix containing all edge weights between numbered node x and node y (reaching an edge is O(1), good for big, directed and undirected graphs)
 
 ![mat](matrix.jpg)
 
@@ -283,6 +283,8 @@ In every iteration:
 - Update the queue, by adding all nodes adjecent to this node:
 	- If a node is already stored in the queue, update its weight if it is now lower.
 	- If a node is already certain. Do not queue it.
+
+---
 
 
 ![Dijkstra.png](Dijkstras.png)

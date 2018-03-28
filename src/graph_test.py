@@ -49,4 +49,4 @@ child1.children = [child2, GraphNode(3), GraphNode(4)]
 child2.children = [root, GraphNode(5), GraphNode(6)]
 
 print(bfs_path(root))
-print(dfs_path(root))
+# print(dfs_path(root))
