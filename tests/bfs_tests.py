@@ -1,5 +1,5 @@
 import unittest
-from src.bfs_exercise import get_values_by_level
+from src.bfs import get_values_by_level
 from src.binary_tree import BinaryTreeNode
 
 
