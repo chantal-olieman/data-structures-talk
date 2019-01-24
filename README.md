@@ -17,4 +17,4 @@ The [second talk](/talk/data-structures-2.md) contains:
 - Heaps
 
 The [source folder](/src) contains an exercise on BSF and tests to verify the answers. 
-The correct answers for this exercise can be found on [the answers branch](../tree/2-answers).
+The correct answers for this exercise can be found on [the answers branch](https://github.com/chantal-olieman/data-structures-talk/tree/2-answers).
